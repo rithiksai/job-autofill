@@ -1,12 +1,75 @@
-# React + Vite
+# ApplyPilot Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ApplyPilot is a productivity-focused Chrome extension that helps job seekers streamline the application process by autofilling job application forms and tracking submissions in one click.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Autofill job application forms with your saved information
+- 📌 Track applications directly from the extension
+- 🧠 Simple, clean UI for quick access
+- 🔒 Privacy-focused: No data is stored without your consent
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19 + Vite** for blazing fast UI
+- **Tailwind CSS** for styling
+- **Chrome Extensions API**
+- **Supabase (planned)** for backend data storage
+
+## 📂 Project Structure
+
+```
+├── public/
+│   └── manifest.json
+├── src/
+│   ├── popup/
+│   │   ├── Popup.jsx
+│   │   └── index.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── popup.html
+├── vite.config.js
+└── package.json
+```
+
+## 🧪 Development
+
+Start the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Then load your extension in Chrome:
+
+1. Visit `chrome://extensions/`
+2. Enable **Developer Mode**
+3. Click **Load Unpacked**
+4. Select your project `dist` folder
+
+You can preview popup UI at `http://localhost:5173/popup.html`
+
+## 🔨 Build for Production
+
+```bash
+npm run build
+```
+
+This creates a `dist/` folder you can load into Chrome as an unpacked extension.
+
+## ✅ TODOs
+
+- [x] Popup UI design
+- [x] Tailwind layout and styling
+- [ ] Implement autofill functionality
+- [ ] Integrate with Supabase for tracking
+
+## 📜 License
+
+MIT
+
+---
+
+Crafted with ❤️ by ApplyPilot
